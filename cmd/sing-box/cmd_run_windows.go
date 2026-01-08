@@ -14,7 +14,6 @@ import (
 )
 
 // run starts the IPC pipe server on Windows
-// This replaces file-based config loading with Named Pipe IPC
 func run() error {
 	// Create context with registries (required for DNS transport parsing)
 	ctx := include.Context(globalCtx)
@@ -29,7 +28,7 @@ func run() error {
 	defer logFactory.Close()
 
 	logger := logFactory.Logger()
-	logger.Info("starting sing-box with Named Pipe IPC")
+	logger.Info("loopie started")
 
 	// Create and start pipe server
 	pipeServer, err := ipc.NewPipeServer(ctx, logger)

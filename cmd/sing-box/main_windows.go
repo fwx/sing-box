@@ -27,7 +27,7 @@ func main() {
 	defer logFactory.Close()
 
 	logger := logFactory.Logger()
-	logger.Info("starting sing-box with Named Pipe IPC")
+	logger.Info("loopie started")
 
 	pipeServer, err := ipc.NewPipeServer(ctx, logger)
 	if err != nil {

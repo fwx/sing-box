@@ -1,4 +1,4 @@
-//go:build !generate
+//go:build !generate && !windows
 
 package main
 
